@@ -58,7 +58,7 @@ function App() {
       <Flex direction="column" p="8" gap="7" justify="center">
         <Container py="0">
           <Flex align="center" direction="column">
-            <Text weight="bold" color="tomato" size="9">
+            <Text weight="bold" color={actualTimer === "focus" ? "tomato" : "blue"} size="9">
               {milisecondsToTime(
                 actualTimer === "focus" ? focusCountdown : intervalCountdown
               )}
