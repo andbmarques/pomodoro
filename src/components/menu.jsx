@@ -7,34 +7,56 @@ const Menu = ({ focusTimer, intervalTimer, actualTimer }) => {
         <Flex gap="2" justify="center">
           <Button
             className="button"
-            color="red"
-            disabled={focusTimer.isFocusRunning || intervalTimer.isIntervalRunning}
+            color={actualTimer === "focus" ? "red" : "blue"}
+            disabled={
+              focusTimer.isFocusRunning || intervalTimer.isIntervalRunning
+            }
             variant="soft"
-            onClick={actualTimer === "focus" ? focusTimer.focusStart : intervalTimer.intervalStart}
+            onClick={
+              actualTimer === "focus"
+                ? focusTimer.focusStart
+                : intervalTimer.intervalStart
+            }
           >
             Start
           </Button>
           <Button
             className="button"
-            color="red"
-            disabled={!focusTimer.isFocusRunning && !intervalTimer.isIntervalRunning}
+            color={actualTimer === "focus" ? "red" : "blue"}
+            disabled={
+              !focusTimer.isFocusRunning && !intervalTimer.isIntervalRunning
+            }
             variant="soft"
-            onClick={actualTimer === "focus" ? focusTimer.focusReset : intervalTimer.intervalReset}
+            onClick={
+              actualTimer === "focus"
+                ? focusTimer.focusReset
+                : intervalTimer.intervalReset
+            }
           >
             Reset
           </Button>
           <Button
             className="button"
-            color="red"
-            disabled={!focusTimer.isFocusRunning && !intervalTimer.isIntervalRunning}
+            color={actualTimer === "focus" ? "red" : "blue"}
+            disabled={
+              !focusTimer.isFocusRunning && !intervalTimer.isIntervalRunning
+            }
             variant="soft"
-            onClick={actualTimer === "focus" ? focusTimer.focusPause : intervalTimer.intervalPause}
+            onClick={
+              actualTimer === "focus"
+                ? focusTimer.focusPause
+                : intervalTimer.intervalPause
+            }
           >
             Pause
           </Button>
         </Flex>
         <Flex justify="center" px="2">
-          <Button style={{ width: "100%" }} color="red" variant="outline">
+          <Button
+            style={{ width: "100%" }}
+            color={actualTimer === "focus" ? "red" : "blue"}
+            variant="outline"
+          >
             Config
           </Button>
         </Flex>
