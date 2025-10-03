@@ -12,7 +12,7 @@ import { useCountdownTimer } from "use-countdown-timer";
 import { timeToMiliseconds, milisecondsToTime } from "./utils/utils.jsx";
 import "./App.css";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Menu from "./components/menu.jsx";
 
 function App() {
@@ -20,6 +20,8 @@ function App() {
   const [intervalTime, setIntervalTime] = useState({ minutes: 0, seconds: 10 });
 
   const [actualTimer, setActualTimer] = useState("focus");
+
+  const audioRef = useRef(null)
 
   const {
     countdown: focusCountdown,
@@ -44,8 +46,10 @@ function App() {
   const changeTimer = () => {
     if (actualTimer == "focus" && focusCountdown == 0){
       setActualTimer("interval")
+      audioRef.current.play()
     } else if (actualTimer == "interval" && intervalCountdown == 0) {
       setActualTimer("focus")
+      audioRef.current.play()
     }
   }
 
@@ -55,6 +59,7 @@ function App() {
 
   return (
     <Theme appearance={"dark"}>
+      <audio ref={audioRef} src="/doorbell.mp3" />
       <Flex direction="column" p="8" gap="7" justify="center">
         <Container py="0">
           <Flex align="center" direction="column">
