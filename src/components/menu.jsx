@@ -51,7 +51,7 @@ const Menu = ({ focusTimer, intervalTimer, actualTimer }) => {
             Pause
           </Button>
         </Flex>
-        <Flex justify="center" px="2">
+        <Flex justify="center" px="5">
           <Button
             style={{ width: "100%" }}
             color={actualTimer === "focus" ? "red" : "blue"}

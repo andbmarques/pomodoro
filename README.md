@@ -12,7 +12,7 @@ Soon...
 
 **Created with [Tauri v2](https://v2.tauri.app/)**
 
-**Front-end:** React, Redux
+**Front-end:** React, RadixUI
 
 **Back-end:** Rust
 
