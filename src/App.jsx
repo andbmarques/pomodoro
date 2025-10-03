@@ -17,7 +17,7 @@ import Menu from "./components/menu.jsx";
 
 function App() {
   const [focusTime, setFocusTime] = useState({ minutes: 0, seconds: 5 });
-  const [intervalTime, setIntervalTime] = useState({ minutes: 0, seconds: 10 });
+  const [intervalTime, setIntervalTime] = useState({ minutes: 10, seconds: 0 });
 
   const [actualTimer, setActualTimer] = useState("focus");
 
