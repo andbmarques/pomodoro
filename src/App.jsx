@@ -10,12 +10,16 @@ import Menu from "./components/menu.jsx";
 
 function App() {
 
-  const [focusTime, setFocusTime] = useState({ hours: 0, minutes: 5, seconds: 0 })
-  const [intervalTime, setIntervalTime] = useState()
+  const [focusTime, setFocusTime] = useState({ minutes: 5, seconds: 0 })
+  const [intervalTime, setIntervalTime] = useState({ minutes: 2, seconds: 30 })
 
   const [actualTimer, setActualTimer] = useState("focus")
 
   const { countdown: focusCountdown, start: focusStart, reset: focusReset, pause: focusPause, isRunning: isFocusRunning } = useCountdownTimer({
+    timer: 1000 * timeToMiliseconds(focusTime)
+  })
+
+  const { countdown: intervalCountdown, start: intervalStart, reset: intervalReset, pause: intervalPause, isRunning: isIntervalRunning } = useCountdownTimer({
     timer: 1000 * timeToMiliseconds(focusTime)
   })
 
