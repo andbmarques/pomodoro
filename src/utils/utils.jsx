@@ -1,7 +1,9 @@
 export const timeToMiliseconds = (timeObject) => {
     if (timeObject) {
         let totalTime = timeObject.seconds
+
         totalTime += timeObject.minutes * 60
+        
         return totalTime
     }
 }
