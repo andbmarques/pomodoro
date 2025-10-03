@@ -1,7 +1,23 @@
-# Tauri + React
 
-This template should help get you started developing with Tauri and React in Vite.
+# 🍅 Pomodoro
 
-## Recommended IDE Setup
+A simple pomodoro timer desktop app made with Tauri using React + Javascript.
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+## Demo
+
+Soon...
+
+
+## Stack used
+
+**Created with [Tauri v2](https://v2.tauri.app/)**
+
+**Front-end:** React, Redux
+
+**Back-end:** Rust
+
+
+## Installation
+
+Soon...
+    
