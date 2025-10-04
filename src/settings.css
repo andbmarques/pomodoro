@@ -1,0 +1,9 @@
+.header:after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  background-color: #8C333A;
+  width: 65%;
+  margin-left: 15px;
+  top: 10%;
+}
