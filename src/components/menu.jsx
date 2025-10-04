@@ -1,6 +1,7 @@
 import { Button, Container, Flex } from "@radix-ui/themes";
 
-const Menu = ({ focusTimer, intervalTimer, actualTimer }) => {
+const Menu = ({ focusTimer, intervalTimer, actualTimer, openSettings }) => {
+
   return (
     <Container>
       <Flex direction="column" gap="2">
@@ -56,6 +57,7 @@ const Menu = ({ focusTimer, intervalTimer, actualTimer }) => {
             style={{ width: "100%" }}
             color={actualTimer === "focus" ? "red" : "blue"}
             variant="outline"
+            onClick={openSettings}
           >
             Config
           </Button>
