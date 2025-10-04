@@ -17,10 +17,11 @@ import "./App.css";
 
 import { useEffect, useRef, useState } from "react";
 import Menu from "./components/menu.jsx";
+import { path } from "@tauri-apps/api";
 
 const openSettings = () => {
   const settingsWindow = new WebviewWindow('settingsWindow', {
-    url: 'settings.html',
+    url: '../public/settings.html',
     width: 400,
     height: 300,
     title: 'Pomodoro: Settings'
